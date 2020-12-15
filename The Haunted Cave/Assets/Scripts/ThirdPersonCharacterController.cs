@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ThirdPersonCharacterController : MonoBehaviour {
     public float Speed;
@@ -42,10 +43,16 @@ public class ThirdPersonCharacterController : MonoBehaviour {
 
         HealthBar.value = Health;
         ManaBar.value = Mana;
+
+        if (Health <= 0)
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(" Si detecta colision");
         //Enemigo chico
         if (collision.transform.tag == "Enemy1")
         {
