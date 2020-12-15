@@ -18,7 +18,7 @@ public class EnemySpawn : MonoBehaviour
         while (true)
         {
             GameObject Enemy1 = Instantiate(enemyPrefab1);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
         }
     }
 
@@ -27,7 +27,7 @@ public class EnemySpawn : MonoBehaviour
         while (true)
         {
             GameObject Enemy2 = Instantiate(enemyPrefab2);
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(8);
         }
     }
 }

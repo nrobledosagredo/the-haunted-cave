@@ -33,7 +33,7 @@ public class Weapon1 : MonoBehaviour
             bulletObject.transform.position = transform.position + transform.forward;
             bulletObject.transform.forward = playerCamera.transform.forward;
 
-            Player.Mana = Player.Mana - 10f;
+            Player.Mana = Player.Mana - 5f;
         }
     }
 }
