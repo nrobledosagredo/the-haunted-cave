@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ThirdPersonCharacterController : MonoBehaviour {
     public float Speed;
 
-    //Recursos
+    //Recursos del jugador
     public float Health;
     public float Mana;
 
@@ -24,6 +24,9 @@ public class ThirdPersonCharacterController : MonoBehaviour {
         Vector3 playerMovement = new Vector3(hor, 0f, ver) * Speed * Time.deltaTime;
         transform.Translate(playerMovement, Space.Self);
 
+        HealthBar.value = Health;
+        ManaBar.value = Mana;
+
         //MANA
         if (Input.GetKey("left shift") & Mana > 0f)
         {
@@ -36,30 +39,19 @@ public class ThirdPersonCharacterController : MonoBehaviour {
         }
 
         //HEALTH
-        if (Input.GetKey("space"))
-        {
-            Health = Health - 10f * Time.deltaTime;
-        }
-
-        HealthBar.value = Health;
-        ManaBar.value = Mana;
-
         if (Health <= 0)
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("Game Over");
         }
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(" Si detecta colision");
-        //Enemigo chico
         if (collision.transform.tag == "Enemy1")
         {
             Health = Health - 5f;
         }
 
-        //Enemigo grande
         if (collision.transform.tag == "Enemy2")
         {
             Health = Health - 20f;
