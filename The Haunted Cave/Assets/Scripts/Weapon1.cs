@@ -9,7 +9,9 @@ public class Weapon1 : MonoBehaviour
     public GameObject playerObject;
 
     public float fireRate = 0.5f;
-    private float nextFire = 0.0f;
+    private float nextFire = 1.0f;
+
+    //public Animator anim;
 
     AudioSource bulletAudio;
     void Start()
@@ -23,17 +25,19 @@ public class Weapon1 : MonoBehaviour
         ThirdPersonCharacterController Player = playerObject.GetComponent<ThirdPersonCharacterController>();
         if (Input.GetMouseButtonDown(0) & Player.Mana > 0 & Time.time > nextFire)
         {
+            //animacion
+            //anim.SetTrigger("atack");
             //Play Audio
             bulletAudio.Play();
 
             //Shoot
-            nextFire = Time.time + fireRate;
+            nextFire = Time.time*0.6f + fireRate;
 
             GameObject bulletObject = Instantiate(bulletPrefab);
             bulletObject.transform.position = transform.position + transform.forward;
             bulletObject.transform.forward = playerCamera.transform.forward;
 
-            Player.Mana = Player.Mana - 5f;
+            Player.Mana = Player.Mana - 25f;
         }
     }
 }

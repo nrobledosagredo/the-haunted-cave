@@ -6,6 +6,7 @@ public class animPlayerController : MonoBehaviour
 {
     private Animator anim;
     public Transform conextPosition;
+    float timer=1.0f;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class animPlayerController : MonoBehaviour
     {
         float hor = Input.GetAxis("Horizontal");
         float ver = Input.GetAxis("Vertical");
-
+        timer = timer - 0.5f*Time.deltaTime;
         if (ver > 0f)
         {
             anim.SetBool("FW", true);
@@ -51,6 +52,13 @@ public class animPlayerController : MonoBehaviour
             anim.SetBool("BW", false);
             anim.SetBool("RW", false);
             anim.SetBool("LW", false);
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            //animacion
+        	timer = 1.0f;
+            anim.SetTrigger("atack");
+
         }
     }
 }
