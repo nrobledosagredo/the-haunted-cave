@@ -42,7 +42,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: aff6cdb0cfde85547b20055cc6b6468b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.15
   m_Pitch: 0.2
   Loop: 1
   Mute: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2901568209ca404cbe1dce9cd42eafd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
+  Speed: 15
 --- !u!114 &1763827357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c06acb86489e84ca4696cc797be7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 3
+  Health: 5
+  GC: {fileID: 0}
 --- !u!1001 &7349453945261724523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,17 +237,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f906b67480bf2764694f291f06237be8,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.3614
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f906b67480bf2764694f291f06237be8,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.3614
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f906b67480bf2764694f291f06237be8,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.3614
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f906b67480bf2764694f291f06237be8,
         type: 3}

@@ -8,7 +8,7 @@ public class Weapon1 : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject playerObject;
 
-    public float fireRate = 0.5f;
+    public float fireRate = 1.0f;
     private float nextFire = 1.0f;
 
     //public Animator anim;
@@ -31,7 +31,7 @@ public class Weapon1 : MonoBehaviour
             bulletAudio.Play();
 
             //Shoot
-            nextFire = Time.time*0.6f + fireRate;
+            nextFire = Time.time + fireRate;
 
             GameObject bulletObject = Instantiate(bulletPrefab);
             bulletObject.transform.position = transform.position + transform.forward;
