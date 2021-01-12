@@ -5294,6 +5294,11 @@ PrefabInstance:
       propertyPath: ManaBar
       value: 
       objectReference: {fileID: 1701575049}
+    - target: {fileID: 907145638006294354, guid: a305f0c6394003f4eaddcca27633c516,
+        type: 3}
+      propertyPath: Speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 907145638006294355, guid: a305f0c6394003f4eaddcca27633c516,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5377,7 +5382,7 @@ PrefabInstance:
     - target: {fileID: 3002464756652490096, guid: a305f0c6394003f4eaddcca27633c516,
         type: 3}
       propertyPath: m_Mass
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3002464756652490096, guid: a305f0c6394003f4eaddcca27633c516,
         type: 3}

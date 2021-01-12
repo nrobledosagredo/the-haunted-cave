@@ -30,7 +30,7 @@ public class ThirdPersonCharacterController : MonoBehaviour {
         //MANA
         if (Input.GetKey("left shift") & Mana > 0f)
         {
-            transform.Translate((hor * 1.02f) * Speed * Time.deltaTime, 0f, (ver * 1.02f) * Speed * Time.deltaTime, Space.Self);
+            transform.Translate((hor * 1.01f) * Speed * Time.deltaTime, 0f, (ver * 1.01f) * Speed * Time.deltaTime, Space.Self);
             Mana = Mana - 2.5f * Time.deltaTime;
         }
         else if (Mana < 100f)

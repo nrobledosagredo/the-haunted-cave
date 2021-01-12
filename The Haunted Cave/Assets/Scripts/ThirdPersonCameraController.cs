@@ -25,7 +25,7 @@ public class ThirdPersonCameraController : MonoBehaviour
         mouseX += Input.GetAxis("Mouse X") * RotationSpeed;
         mouseY -= Input.GetAxis("Mouse Y") * RotationSpeed;
 
-        mouseY = Mathf.Clamp(mouseY, -35, 60); //previene que se mueva alrededor del jugador
+        mouseY = Mathf.Clamp(mouseY, -15, 20); //previene que se mueva alrededor del jugador
 
         transform.LookAt(Target);
 
