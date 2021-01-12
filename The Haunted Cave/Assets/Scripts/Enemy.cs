@@ -5,6 +5,12 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float Health;
+    public GameObject GC;
+
+    private void Start()
+    {
+        GC = GameObject.Find("Portal");
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -13,9 +19,11 @@ public class Enemy : MonoBehaviour
             Destroy(collision.gameObject);
             Health = Health - 1f;
 
-            if(Health <= 0)
+            if (Health <= 0)
             {
+                GC.SendMessage("aumentaKill");
                 gameObject.SetActive(false);
+                Destroy(gameObject);
             }
         }
     }
