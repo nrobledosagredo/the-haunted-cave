@@ -8,6 +8,8 @@ TagManager:
   - Enemy2
   - Bullet
   - Portal
+  - Gates
+  - Bullet2
   layers:
   - Default
   - TransparentFX

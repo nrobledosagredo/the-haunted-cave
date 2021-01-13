@@ -110,6 +110,7 @@ public class EnemySpawn : MonoBehaviour
         {
             if (timer <= 0f)
             {
+                Destroy(GameObject.Find("Gates"));
                 miTexto.text = "Raid Boss";
                 timer = 3.4f;
                 n = 21;
