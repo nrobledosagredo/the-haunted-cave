@@ -23,7 +23,7 @@ public class Weapon2 : MonoBehaviour
     void Update()
     {
         ThirdPersonCharacterController Player = playerObject.GetComponent<ThirdPersonCharacterController>();
-        if (Input.GetMouseButtonDown(1) & Player.Mana > 0 & Time.time > nextFire)
+        if (Input.GetMouseButtonDown(1) & Player.Mana > 50f & Time.time > nextFire)
         {
             bulletAudio.Play();
 
@@ -34,7 +34,7 @@ public class Weapon2 : MonoBehaviour
             bulletObject.transform.position = transform.position + transform.forward;
             bulletObject.transform.forward = playerCamera.transform.forward;
 
-            Player.Mana = Player.Mana - 30f;
+            Player.Mana = Player.Mana - 50f;
         }
     }
 }

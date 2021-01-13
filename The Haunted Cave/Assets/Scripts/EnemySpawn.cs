@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawn : MonoBehaviour
 {
     public GameObject enemyPrefab1;
     public GameObject enemyPrefab2;
+    public GameObject enemyPrefab3;
     public Text miTexto;
     public Text KillTxt;
     //public int waveNumber;
@@ -16,6 +18,7 @@ public class EnemySpawn : MonoBehaviour
     public int kills;
     public int waveCont;
     public int m;
+    public bool boss = true;
 
     void Start()
     {
@@ -35,7 +38,7 @@ public class EnemySpawn : MonoBehaviour
         for (int i = 0; i < n; i++)
         {
             GameObject Enemy1 = Instantiate(enemyPrefab1);
-            yield return new WaitForSeconds(1.2f);
+            yield return new WaitForSeconds(1.5f);
         }
     }
 
@@ -44,9 +47,10 @@ public class EnemySpawn : MonoBehaviour
         for (int j = 0; j < m; j++)
         {
             GameObject Enemy2 = Instantiate(enemyPrefab2);
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(2.5f);
         }
     }
+
     private void Update()
     {
         KillTxt.text = "Kills : " + kills.ToString();
@@ -84,7 +88,6 @@ public class EnemySpawn : MonoBehaviour
                 timer = timer - delay * Time.deltaTime;
             }
 
-
         }
         if (kills == 33 && waveCont == 3)
         {
@@ -104,7 +107,6 @@ public class EnemySpawn : MonoBehaviour
                 timer = timer - delay * Time.deltaTime;
             }
 
-
         }
         if (kills == 67 && waveCont == 4)
         {
@@ -120,13 +122,23 @@ public class EnemySpawn : MonoBehaviour
                 //Aqui se Spawnea el Boss
 
             }
+            else if(boss)
+            {
+                Instantiate(enemyPrefab3);
+                boss = false;
+            }
             else if (timer >= 0.0f && waveCont == 4)
             {
                 timer = timer - delay * Time.deltaTime;
             }
-
-
         }
+
+        if(kills == 68)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
+
     }
     public void aumentaKill()
     {
