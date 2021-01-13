@@ -10,6 +10,7 @@ TagManager:
   - Portal
   - Gates
   - Bullet2
+  - BOSS
   layers:
   - Default
   - TransparentFX

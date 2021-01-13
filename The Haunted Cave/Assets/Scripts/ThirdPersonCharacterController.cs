@@ -56,5 +56,10 @@ public class ThirdPersonCharacterController : MonoBehaviour {
         {
             Health = Health - 20f;
         }
+
+         if (collision.transform.tag == "BOSS")
+        {
+            Health = Health - 30f;
+        }
     }
 }
