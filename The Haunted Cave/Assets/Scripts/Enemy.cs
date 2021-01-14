@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
 
         if (collision.transform.tag == "Bullet2")
         {
-            Health = Health - 4f;
+            Health = Health - 1f;
 
             if (Health <= 0)
             {
