@@ -60,13 +60,5 @@ public class animPlayerController : MonoBehaviour
             anim.SetTrigger("atack");
 
         }
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            //animacion
-            timer = 1.0f;
-            anim.SetTrigger("atack");
-
-        }
     }
 }

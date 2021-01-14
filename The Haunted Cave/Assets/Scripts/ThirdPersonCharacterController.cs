@@ -35,7 +35,7 @@ public class ThirdPersonCharacterController : MonoBehaviour {
         }
         else if (Mana < 100f)
         {
-            Mana = Mana + 35f * Time.deltaTime;
+            Mana = Mana + 20f * Time.deltaTime;
         }
 
         //HEALTH

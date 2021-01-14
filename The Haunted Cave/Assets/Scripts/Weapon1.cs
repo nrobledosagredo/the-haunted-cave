@@ -23,7 +23,7 @@ public class Weapon1 : MonoBehaviour
     void Update()
     {
         ThirdPersonCharacterController Player = playerObject.GetComponent<ThirdPersonCharacterController>();
-        if (Input.GetMouseButtonDown(0) & Player.Mana > 10f & Time.time > nextFire)
+        if (Input.GetMouseButtonDown(0) & Player.Mana > 0 & Time.time > nextFire)
         {
             //animacion
             //anim.SetTrigger("atack");
@@ -37,7 +37,7 @@ public class Weapon1 : MonoBehaviour
             bulletObject.transform.position = transform.position + transform.forward;
             bulletObject.transform.forward = playerCamera.transform.forward;
 
-            Player.Mana = Player.Mana - 10f;
+            Player.Mana = Player.Mana - 7.5f;
         }
     }
 }
