@@ -1,5 +1,5 @@
 # The Haunted Cave
-## Proyecto para el ramo de Computación Gráfica - INFO265
+## INFO265 - Computación Gráfica
 ### Integrantes:
 - Nicolás Robledo
 - Rodrigo Almonacid
